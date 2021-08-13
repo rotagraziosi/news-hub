@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Article from './Article';
 
 class NewsList extends Component {
 
@@ -23,12 +24,10 @@ class NewsList extends Component {
             <div>
                 {this.state.articles.map(article => (
                     <div>
-                        <img alt="article illustration" src={article.urlToImage} />
-                        <div> {article.title}</div>
-                        <div> {article.author}</div>
-                        <div>{article.description}</div>
-                        <div>{article.content}</div>
+                       
+                        <Article article={article} /> 
                     </div>
+
                 ))}
             </div>
         );
