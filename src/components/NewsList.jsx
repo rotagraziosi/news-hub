@@ -9,7 +9,7 @@ class NewsList extends Component {
       };
     componentDidMount() {
         const apiKey = 'de15fd661e714471950156545a4e2f9d';
-        const url = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${apiKey}`;
+        const url = `https://newsapi.org/v2/everything?q="moto"OR"skate"&language=fr&apiKey=${apiKey}`;
         fetch(url)
         .then(response => response.json())
         .then(data => {

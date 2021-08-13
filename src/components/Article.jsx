@@ -10,7 +10,7 @@ class Article extends Component {
                     <img alt="article illustration" src={this.props.article.urlToImage} />
                 </div>
                 <div class="card-body">
-                    <span class="tag"> A NEW TAG</span>
+                    <span class="tag"> {this.props.article.source.name}</span>
                     <h4>{this.props.article.title}</h4>
                     <p>{this.props.article.description}</p>
                     
