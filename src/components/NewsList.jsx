@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
+import './NewsList.css';
 
 class NewsList extends Component {
 
@@ -21,10 +22,9 @@ class NewsList extends Component {
 
     render() {
         return (
-            <div>
+            <div class="container">
                 {this.state.articles.map(article => (
                     <div>
-                       
                         <Article article={article} /> 
                     </div>
 
