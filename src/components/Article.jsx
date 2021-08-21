@@ -5,18 +5,18 @@ class Article extends Component {
    
     render() {
         return (
-            <div class="card">
-                <div class="card-header">
-                    <img alt="article illustration" src={this.props.article.urlToImage} />
+            <div className="card">
+                <div className="card-header">
+                    <img alt="article illustration" src={this.props.article.imageUrl} />
                 </div>
-                <div class="card-body">
-                    <span class="tag"> {this.props.article.source.name}</span>
+                <div className="card-body">
+                    <span className="tag"> {this.props.article.source}</span>
                     <h4>{this.props.article.title}</h4>
                     <p>{this.props.article.description}</p>
                     
                 </div>
-                <div class="user">
-                    <div class="user-info">
+                <div className="user">
+                    <div className="user-info">
                         <h5>
                             {this.props.article.author}
                         </h5>
