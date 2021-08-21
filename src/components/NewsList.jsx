@@ -9,7 +9,7 @@ class NewsList extends Component {
       };
     componentDidMount() {
 
-        let stategy = 'mediaStack';
+        let stategy = 'newYorkTimes';
 
         const apiKey = 'de15fd661e714471950156545a4e2f9d';
         const url = `https://newsapi.org/v2/everything?q="moto"OR"skate"&language=fr&apiKey=${apiKey}`;
@@ -61,16 +61,16 @@ class NewsList extends Component {
                 const nyTimesApiKey= 'ZzUlA9aM96JYwlHVrHWp9vZkO89lg5oO';
                 const nyTimeUrl = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=france&api-key=${nyTimesApiKey}`;
 
-                fetch(mediaStackUrl)
+                fetch(nyTimeUrl)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
                     const articles = data.response.docs.map(x => { 
                         return {
-                            imageUrl: x.image,
+                            imageUrl: `http://nytimes.com/${x.multimedia[0].url}`,
                             source: x.source,
                             title: x.headline.main,
-                            description: x.description,
+                            description: x.lead_paragraph,
                             author: x.author,
                             url: x.web_url
                         };
