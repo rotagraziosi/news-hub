@@ -1,8 +1,23 @@
 .container {
-    display: flex;
-    width: 100vw;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    font-family: "Roboto", sans-serif;
-    color: #10182f;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+  color: #10182f;
+}
+
+.container > div {
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .container > div {
+    width: 50%;
   }
+}
+
+@media (max-width: 500px) {
+  .container > div {
+    width: 100%;
+  }
+}
